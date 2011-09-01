@@ -1,10 +1,6 @@
 # lift
 
-FIXME: write description
-
-## Usage
-
-FIXME: write
+Track workout routines
 
 ## License
 
