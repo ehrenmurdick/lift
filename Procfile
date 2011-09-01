@@ -1,1 +1,1 @@
-web: lein run -m lift.web
+web: lein run -m lift.core
