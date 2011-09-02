@@ -18,4 +18,4 @@
 
 (defn -main []
   (let [port (Integer/parseInt (System/getenv "PORT"))]
-    (ring/run-jetty routes {:port port :join? false})))
+    (ring/run-jetty application {:port port :join? false})))
