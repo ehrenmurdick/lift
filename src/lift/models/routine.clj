@@ -11,3 +11,7 @@
 (defn create [nom]
   (sql/with-connection db
     (sql/insert-values :routines [:name] [nom])))
+
+(defn destroy [id]
+  (sql/with-connection db
+    (sql/delete-rows :routines ["id=?" id])))

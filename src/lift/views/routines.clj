@@ -12,9 +12,14 @@
       (submit-button "Save"))])
 
 (defn display-lifts [lifts]
-  [:div {}
+  [:table {}
    (map
-    (fn [lift] [:h2 {:class "lift"} (h (:name lift))])
+    (fn [lift] 
+      [:tr {:class "lift"} 
+        [:td {} (h (:name lift))]
+        [:td {} 
+          [:a {:data-method "delete" 
+               :href (str "/lifts" (:id lift))} "delete"]]])
     lifts)])
 
 (defn index [lifts]
